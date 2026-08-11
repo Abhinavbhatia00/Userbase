@@ -16,13 +16,6 @@ A small user management application built with React. It fetches users from JSON
 - Axios
 - Tailwind CSS
 
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
 ## API note
 
 JSONPlaceholder simulates POST, PUT, and DELETE requests but does not save them permanently. The app updates its local React state after a successful response so each change is visible until the page is refreshed.
