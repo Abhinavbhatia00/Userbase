@@ -163,43 +163,6 @@ function Users() {
           )}
         </section>
 
-        <section className="mb-16">
-          <p className="mb-2 text-xs font-bold tracking-widest text-gray-500 uppercase">
-            Use cases
-          </p>
-          <h2 className="font-heading mb-6 text-2xl font-bold">
-            Where this can be used
-          </h2>
-          <div className="grid gap-4 md:grid-cols-3">
-            <article className="rounded-xl border border-gray-200 bg-white p-6">
-              <span className="text-xs font-bold text-blue-600">01</span>
-              <h3 className="font-heading mt-6 mb-2 text-lg font-bold">
-                Employee directory
-              </h3>
-              <p className="text-sm leading-6 text-gray-500">
-                Keep basic employee contact details organised in one place.
-              </p>
-            </article>
-            <article className="rounded-xl border border-gray-200 bg-white p-6">
-              <span className="text-xs font-bold text-blue-600">02</span>
-              <h3 className="font-heading mt-6 mb-2 text-lg font-bold">
-                Customer records
-              </h3>
-              <p className="text-sm leading-6 text-gray-500">
-                Add and update customer information for a small business.
-              </p>
-            </article>
-            <article className="rounded-xl border border-gray-200 bg-white p-6">
-              <span className="text-xs font-bold text-blue-600">03</span>
-              <h3 className="font-heading mt-6 mb-2 text-lg font-bold">
-                Admin dashboard
-              </h3>
-              <p className="text-sm leading-6 text-gray-500">
-                Use the CRUD flow as part of a larger administration panel.
-              </p>
-            </article>
-          </div>
-        </section>
       </main>
 
       {showForm && (
