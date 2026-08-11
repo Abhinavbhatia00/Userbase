@@ -22,7 +22,7 @@ I built this project to demonstrate my understanding of React components, hooks,
 
 ## API note
 
-JSONPlaceholder simulates POST, PUT, and DELETE requests but does not save them permanently. The app updates its local React state after a successful response so each change is visible until the page is refreshed.
+JSONPlaceholder simulates POST, PUT, and DELETE requests but does not save them permanently. The app stores the updated list in local storage so changes remain visible while testing the project.
 
 ## Author
 

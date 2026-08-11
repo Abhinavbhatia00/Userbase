@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
 import UserForm from "../components/UserForm";
@@ -13,12 +13,18 @@ function Users() {
     setData: setUsers,
     loading,
     error,
-  } = useFetch(url);
+  } = useFetch(url, "userbase-users");
   const [showForm, setShowForm] = useState(false);
   const [selectedUser, setSelectedUser] = useState(null);
   const [saving, setSaving] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (!loading) {
+      localStorage.setItem("userbase-users", JSON.stringify(users));
+    }
+  }, [users, loading]);
 
   function openAddForm() {
     setSelectedUser(null);

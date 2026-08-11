@@ -1,28 +1,37 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-function useFetch(url) {
-  const [data, setData] = useState([])
+function getSavedUsers(storageKey) {
+  if (!storageKey) return []
+  const savedUsers = localStorage.getItem(storageKey)
+  return savedUsers ? JSON.parse(savedUsers) : []
+}
+
+function useFetch(url, storageKey) {
+  const [data, setData] = useState(() => getSavedUsers(storageKey))
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
-  const fetchData = useCallback(async () => {
-    setLoading(true)
-    setError('')
-    try {
-      // keeping the fetch logic here so the page component stays readable
-      const response = await axios.get(url)
-      setData(response.data)
-    } catch (err) {
-      setError(err.response?.data?.message || 'Could not load users.')
-    } finally {
-      setLoading(false)
-    }
-  }, [url])
-
   useEffect(() => {
-    fetchData()
-  }, [fetchData])
+    // use the saved list when the user returns from the details page
+    if (storageKey && data.length > 0) {
+      setLoading(false)
+      return
+    }
+
+    async function getData() {
+      try {
+        const response = await axios.get(url)
+        setData(response.data)
+      } catch {
+        setError('Could not load users.')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getData()
+  }, [url, storageKey, data.length])
 
   return { data, setData, loading, error }
 }
