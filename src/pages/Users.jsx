@@ -102,7 +102,7 @@ function Users() {
       <header className="flex h-18 items-center justify-between bg-gray-950 px-5 text-white md:px-[max(24px,calc((100vw-1160px)/2))]">
         <div className="font-heading flex items-center gap-2.5 text-lg font-bold">
           <span className="grid h-8 w-8 place-items-center rounded-lg bg-blue-600 text-white">
-            U-B
+            UB
           </span>
           <span>Userbase</span>
         </div>
