@@ -1,6 +1,8 @@
 # Userbase
 
-A small user management application built with React. It fetches users from JSONPlaceholder and provides create, view, update, delete, and search functionality.
+A user management application created by **Abhinav Bhatia** for the **SynergyLabs Frontend Internship Assignment**.
+
+I built this project to demonstrate my understanding of React components, hooks, API integration, form handling, CRUD operations, responsive design, and loading and error states.
 
 ## Features
 
@@ -19,3 +21,8 @@ A small user management application built with React. It fetches users from JSON
 ## API note
 
 JSONPlaceholder simulates POST, PUT, and DELETE requests but does not save them permanently. The app updates its local React state after a successful response so each change is visible until the page is refreshed.
+
+## Author
+
+**Abhinav Bhatia**  
+Email: abhinavbhatiaofficial@gmail.com
