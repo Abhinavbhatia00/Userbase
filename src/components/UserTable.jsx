@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function getInitials(name) {
   return name.split(' ').slice(0, 2).map((word) => word[0]).join('').toUpperCase()
 }
@@ -41,7 +43,8 @@ function UserTable({ users, onEdit, onDelete, deletingId }) {
                 <span>{user.phone}</span>
               </td>
               <td className="whitespace-nowrap pt-1 text-left md:min-w-32 md:px-6 md:py-4 md:text-right">
-                <button className="cursor-pointer border-0 bg-transparent text-sm font-semibold text-gray-600 hover:text-gray-950 hover:underline" onClick={() => onEdit(user)}>Edit</button>
+                <Link className="text-sm font-semibold text-blue-600 hover:underline" to={`/users/${user.id}`}>View</Link>
+                <button className="ml-4 cursor-pointer border-0 bg-transparent text-sm font-semibold text-gray-600 hover:text-gray-950 hover:underline" onClick={() => onEdit(user)}>Edit</button>
                 <button className="ml-4 cursor-pointer border-0 bg-transparent text-sm font-semibold text-red-600 hover:underline disabled:opacity-50" disabled={deletingId === user.id} onClick={() => onDelete(user)}>
                   {deletingId === user.id ? 'Deleting...' : 'Delete'}
                 </button>

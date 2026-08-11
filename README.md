@@ -7,6 +7,7 @@ I built this project to demonstrate my understanding of React components, hooks,
 ## Features
 
 - View users in a responsive table
+- View a separate details page for each user
 - Add and edit users with form validation
 - Delete users after confirmation
 - Loading, success, and error feedback
@@ -16,6 +17,7 @@ I built this project to demonstrate my understanding of React components, hooks,
 - React
 - Vite
 - Axios
+- React Router
 - Tailwind CSS
 
 ## API note
